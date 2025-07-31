@@ -10,12 +10,12 @@ st.set_page_config(
 # Sidebar branding
 with st.sidebar:
     st.image("CBRE_green.png", use_container_width=True)
-    st.title("🏢 LeaseLens AI")
+    st.title("LeaseLens AI")
     st.markdown("**Effective Rent Calculator**")
     st.markdown("Calculate the effective monthly rent for a commercial lease, factoring in base rent, free rent, and annual escalations.")
     st.markdown("---")
-    st.markdown("📞 Contact: sierra.hoffer@cbre.com")
-    st.markdown("🔗 [CBRE Research](https://www.cbre.com/insights)")
+    st.markdown("Contact: sierra.hoffer@cbre.com")
+    st.markdown("[CBRE Research](https://www.cbre.com/insights)")
 
 # Main title
 st.markdown(
