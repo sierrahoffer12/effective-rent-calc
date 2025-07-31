@@ -15,7 +15,7 @@ with st.sidebar:
     st.markdown("Calculate the effective monthly rent for a commercial lease, factoring in base rent, free rent, and annual escalations.")
     st.markdown("---")
     st.markdown("📞 Contact: sierra.hoffer@cbre.com")
-    st.markdown("🔗 [CBRE Website](https://www.cbre.com)")
+    st.markdown("🔗 [CBRE Research Website](https://www.cbre.com/insights)")
 
 # Main title
 st.markdown(
