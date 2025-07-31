@@ -31,10 +31,10 @@ This tool helps you compute the **effective monthly rent** for a commercial leas
 """)
 
 # Input fields
-base_rent = st.number_input("💵 Base Rent ($/month)", min_value=0.0, value=30.0, step=0.5)
-lease_term_months = st.number_input("📅 Lease Term (months)", min_value=1, value=60, step=1)
-free_rent_months = st.number_input("🎁 Free Rent Months", min_value=0, value=3, step=1)
-annual_escalation_rate = st.number_input("📈 Annual Escalation Rate (%)", min_value=0.0, value=3.0, step=0.1)
+base_rent = st.number_input("Base Rent ($/month)", min_value=0.0, value=30.0, step=0.5)
+lease_term_months = st.number_input("Lease Term (months)", min_value=1, value=60, step=1)
+free_rent_months = st.number_input("Free Rent Months", min_value=0, value=3, step=1)
+annual_escalation_rate = st.number_input("Annual Escalation Rate (%)", min_value=0.0, value=3.0, step=0.1)
 
 # Calculation function
 def calculate_effective_rent(base_rent, lease_term_months, free_rent_months, annual_escalation_rate):
