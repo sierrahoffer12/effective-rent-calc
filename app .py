@@ -3,7 +3,6 @@ import streamlit as st
 # Set page configuration
 st.set_page_config(
     page_title="Effective Rent Calculator",
-    page_icon="🏢",
     layout="centered"
 )
 
@@ -58,6 +57,6 @@ def calculate_effective_rent(base_rent, lease_term_months, free_rent_months, ann
 # Calculate and display result
 if st.button("Calculate Effective Rent"):
     effective_rent = calculate_effective_rent(base_rent, lease_term_months, free_rent_months, annual_escalation_rate)
-    st.success(f"💰 Effective Monthly Rent: **${effective_rent:.2f}**")
+    st.success(f"Effective Monthly Rent: **${effective_rent:.2f}**")
 
 
