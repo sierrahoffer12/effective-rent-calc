@@ -1,0 +1,37 @@
+import streamlit as st
+
+def calculate_effective_rent(base_rent, lease_term_months, free_rent_months, annual_escalation_rate):
+    total_rent = 0.0
+    current_rent = base_rent
+
+    for month in range(1, lease_term_months + 1):
+        if month <= free_rent_months:
+            rent_this_month = 0.0
+        else:
+            rent_this_month = current_rent
+        total_rent += rent_this_month
+
+        if month % 12 == 0:
+            current_rent *= (1 + annual_escalation_rate / 100)
+
+    effective_rent = total_rent / lease_term_months
+    return effective_rent
+
+st.title("Effective Rent Calculator")
+
+st.markdown("""
+This calculator computes the **effective monthly rent** for a commercial lease, taking into account:
+- Base rent
+- Lease term (in months)
+- Free rent months
+- Annual escalation rate
+""")
+
+base_rent = st.number_input("Base Rent ($/month)", min_value=0.0, value=30.0, step=0.5)
+lease_term_months = st.number_input("Lease Term (months)", min_value=1, value=60, step=1)
+free_rent_months = st.number_input("Free Rent Months", min_value=0, value=3, step=1)
+annual_escalation_rate = st.number_input("Annual Escalation Rate (%)", min_value=0.0, value=3.0, step=0.1)
+
+if st.button("Calculate Effective Rent"):
+    effective_rent = calculate_effective_rent(base_rent, lease_term_months, free_rent_months, annual_escalation_rate)
+    st.success(f"Effective Monthly Rent: ${effective_rent:.2f}")
